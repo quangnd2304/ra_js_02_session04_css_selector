@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+</head>
+
+<body>
+    <!-- Universal selector - * - Chọn tất cả các phần tử trong trang web -->
+    <h2>Tiêu đề</h2>
+    <p class="zone04">Đoạn văn</p>
+    <p class="zone04">Đoạn văn</p>
+    <p class="zone04">Đoạn văn</p>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <!-- TagName selector - tên thẻ HTML - Chọn các phần tử theo tên thẻ -->
+    <h3>Tiêu đề 3</h3>
+    <h4>Tiêu đề 4</h4>
+    <h3>Tiêu đề 3 - 2</h3>
+    <style>
+        h3 {
+            color: violet;
+        }
+    </style>
+    <!-- tag01 tag02 selector - Chọn tất cả các thành phần tag02 ở trong tag01 -->
+    <div>
+        <p>Đoạn văn 1</p>
+        <p>Đoạn văn 2</p>
+        <h3>Tiêu đề 3-3</h3>
+    </div>
+    <p id="zone03">Đoạn văn 3</p>
+    <div>
+        <p>Đoặn văn 4</p>
+    </div>
+    <style>
+        div p {
+            background-color: aqua;
+        }
+    </style>
+    <!-- tag01,tag02 - Chọn tất cả các thẻ tag01 và tag02 -->
+    <style>
+        h3,
+        h4 {
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <!-- #id - Chọn phần tử có id như vậy -->
+    <style>
+        #zone03 {
+            color: red;
+        }
+    </style>
+    <!-- .class - chọn các phần tử có class như vậy -->
+    <style>
+        .zone04 {
+            font-size: 10px;
+        }
+    </style>
+    <!-- attribute - Chọn theo thuộc tính của thẻ html -->
+    <input type="text" name="firstName" id="firstName" placeholder="First Name" />
+    <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+    <input type="password" name="password" id="password" placeholder="Password" />
+    <style>
+        [type="text"] {
+            background-color: yellow;
+        }
+    </style>
+</body>
+
+</html>

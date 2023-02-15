@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Selector</title>
+</head>
+
+<body>
+    <p id="zone01">
+        Đoạn văn của lớp học Javascript
+    </p>
+    <style>
+        #zone01::before {
+            content: "Nội dung đầu";
+        }
+
+        #zone01::after {
+            content: "Nội dung cuối"
+        }
+    </style>
+    <!-- tag01:first-child: chọn các thành phần tag01 phải đứng đầu tiên trong các thành phần cha của nó -->
+    <!-- tag01:first-letter: chọn ký tự đầu tiên của tag01 -->
+    <div>
+        <p>Đoạn văn 1</p>
+        <h3>Tiêu đề 1</h3>
+        <h3>Tiêu đề 2</h3>
+        <p>Đoạn văn 2</p>
+    </div>
+    <p>Đoạn văn 3</p>
+    <style>
+        p:first-child {
+            color: red;
+        }
+
+        p::first-letter {
+            color: blue;
+        }
+
+        p::first-line {
+            font-size: 30px;
+        }
+    </style>
+    <!-- :focus - chọn thành phần đang được focus -->
+    <input type="text" name="useName" id="useName" />
+    <input type="password" name="pass" id="pass" />
+    <style>
+        input:focus {
+            background-color: yellow;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="https://rikkei.edu.vn/">JS-11</a></li>
+            <li><a href="#">JS-12</a></li>
+            <li><a href="https://rikkei.edu.vn/">JS-01</a></li>
+        </ul>
+    </nav>
+    <style>
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: blue;
+        }
+    </style>
+    <!-- 
+        tag01:first-of-type: chọn thành phần tag01 là duy nhất hoặc đầu tiền của cha 
+        tag01:last-of-type: Chọn thành phần tag01 là duy nhật hoặc là cuối cùng của cha
+    -->
+    <h4>Tiêu đề h4-1</h4>
+    <h4>Tiêu đề h4-2</h4>
+    <div>
+        <h4>Tiêu đề h4-3</h4>
+        <h4>Tiêu đề h4-4</h4>
+    </div>
+    <div>
+        <h5>Tiêu đề h5-1</h5>
+        <h4>Tiêu đề h4-5</h4>
+    </div>
+    <div>
+        <h4>Tiêu đề h4-6</h4>
+    </div>
+    <style>
+        h4:first-of-type {
+            color: brown
+        }
+
+        h4:last-of-type {
+            color: yellow;
+        }
+
+        h4:only-of-type {
+            color: blueviolet;
+        }
+
+        h4:only-child {
+            color: aqua;
+        }
+    </style>
+    <!-- nth-child(n) - Chọn thành phần thứ n trong cha -->
+    <div>
+        <h6>Tiêu đề 6-1</h6>
+        <p>đoạn văn</p>
+        <h6>Tiêu đề 6-2</h6>
+        <h6>Tiêu đề 6-3</h6>
+        <h6>Tiêu đề 6-4</h6>
+        <h6>Tiêu đề 6-5</h6>
+    </div>
+    <style>
+        h6:nth-child(3) {
+            background-color: aqua;
+        }
+    </style>
+    <!-- :enabled, :disabled, :checked -->
+    <input type="text" name="" id="">
+    <input type="text" name="" id="" disabled>
+    <input type="radio" name="" id="" checked>
+    <style>
+        input:enabled {
+            background-color: blue;
+        }
+
+        input:disabled {
+            /* Mã mầu: tên, rgb, mã màu */
+            /* rgb - red - green - blue */
+            background-color: rgb(255, 255, 0);
+        }
+
+        input:checked {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</body>
+
+</html>

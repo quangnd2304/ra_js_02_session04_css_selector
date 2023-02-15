@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector - Demo02</title>
+</head>
+
+<body>
+    <!-- tag01+tag02 - Chọn tất cả các tag02 đặt ngay sau tag01 -->
+    <p>Đoạn văn 1</p>
+    <div>
+        <p>Đoạn văn 2</p>
+        <h3>Tiêu đề 3</h3>
+        <p>Đoạn văn 3</p>
+    </div>
+    <p>Đoạn văn 4</p>
+    <p>Đoạn văn 5</p>
+    <style>
+        div+p {
+            color: red;
+        }
+    </style>
+    <!-- tag01>tag02 -- Chọn tất cả các thành phần tag02 có cha là tag 01 -->
+    <p>Đoạn văn 6</p>
+    <section>
+        <p>Đoạn văn 7</p>
+        <p>Đoạn văn 8</p>
+        <div>
+            <p>Đoạn văn 9</p>
+        </div>
+        <p>Đoạn văn 10</p>
+    </section>
+    <p>Đoạn văn 11</p>
+    <style>
+        section>p {
+            background-color: chocolate;
+        }
+    </style>
+    <!-- :active - chọn các thành phần được kích hoạt -->
+    <a href="#">Home</a>
+    <a href="#">Abouts</a>
+    <a href="#">Courses</a>
+    <style>
+        a:active {
+            color: red;
+        }
+
+        a:hover {
+            background-color: yellow;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Priority</title>
+</head>
+
+<body>
+    <p style="color: blue;">Javascript fullstack - 02 - CSS - Độ ưu tiên</p>
+    <h3 id="zone01">Tiêu đề 3</h3>
+    <h4 class="zone02 zone03">Tiêu đề 4</h4>
+    <h5 class="zone02">Tiêu đề 5</h5>
+    <!-- 
+        Độ ưu tiêu theo cách viết: inline>Internal-External>default Browser
+        Độ ưu tiên theo bộ chọn: inline>id>class>tagName
+    -->
+    <style>
+        p {
+            color: red !important;
+        }
+
+        #zone01 {
+            color: blueviolet;
+        }
+
+
+        .zone03 {
+            color: brown;
+        }
+
+        .zone02 {
+            color: chartreuse
+        }
+
+        h5 {
+            color: yellow;
+        }
+    </style>
+</body>
+
+</html>
